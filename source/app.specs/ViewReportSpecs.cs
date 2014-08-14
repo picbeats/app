@@ -7,7 +7,7 @@ using Machine.Specifications;
 
 namespace app.specs
 {
-  // [Subject(typeof(ViewReport<object,object>))]
+  [Subject(typeof(ViewReport<object,object>))]
   public class ViewReportSpecs
   {
     public class ReportInput { }
