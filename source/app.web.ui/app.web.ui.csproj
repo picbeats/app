@@ -181,6 +181,6 @@
     </VisualStudio>
   </ProjectExtensions>
   <PropertyGroup>
-    <PostBuildEvent>copy /Y   $(ProjectDir)..\..\artifacts\app.dll $(ProjectDir)..\app.web.ui\Bin\</PostBuildEvent>
+    <PostBuildEvent>copy /Y   $(ProjectDir)..\..\artifacts\app.dll $(ProjectDir)Bin\</PostBuildEvent>
   </PropertyGroup>
 </Project>
