@@ -180,4 +180,7 @@
       </FlavorProperties>
     </VisualStudio>
   </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>copy /Y   $(ProjectDir)..\..\artifacts\app.dll $(ProjectDir)..\app.web.ui\Bin\</PostBuildEvent>
+  </PropertyGroup>
 </Project>
