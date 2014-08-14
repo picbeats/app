@@ -25,9 +25,12 @@ namespace app.specs
         {
           display_engine = depends.on<IDisplayInformation>();
           department_finder = depends.on<IGetDepartments>();
+
+          request = fake.an<IProvideRequestDetails>();
+
+          match = fake.an<DepartmentMatch>();
           departmentMatch = req => match;
           departments = new List<MainDepartmentLineItem>();
-          request = fake.an<IProvideRequestDetails>();
           department_finder.setup(x => x.get_the_departments(match)).Return(departments);      
         };
 
