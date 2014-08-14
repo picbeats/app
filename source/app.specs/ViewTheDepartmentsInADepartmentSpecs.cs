@@ -23,17 +23,22 @@ namespace app.specs
       private Establish c =
         () =>
         {
+          display_engine = depends.on<IDisplayInformation>();
+          department_finder = depends.on<IGetDepartments>();
           departmentMatch = req => match;
           departments = new List<MainDepartmentLineItem>();
-          department_finder = depends.on<IGetDepartments>();
-          department_finder.setup(x => x.get_the_departments(match)).Return(departments);
+          request = fake.an<IProvideRequestDetails>();
+          department_finder.setup(x => x.get_the_departments(match)).Return(departments);      
         };
+
+      Because b = () =>
+        sut.process(request);
 
       private It displays_the_departments = () =>
         display_engine.received(x => x.display(departments));
 
-
       private static IBuildDepartmentMatch departmentMatch;
+      static IProvideRequestDetails request;
       private static DepartmentMatch match;
       private static IDisplayInformation display_engine;
       private static IGetDepartments department_finder;
