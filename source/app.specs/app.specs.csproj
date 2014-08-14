@@ -120,6 +120,7 @@
     <Compile Include="MessageGeneratorSpecs.cs" />
     <Compile Include="RequestCommandSpecs.cs" />
     <Compile Include="utility\ObjectFactory.cs" />
+    <Compile Include="ViewReportSpecs.cs" />
     <Compile Include="ViewDepartmentsOfDepartmentSpecs.cs" />
     <Compile Include="ViewTheMainDepartmentsInTheStoreSpecs.cs" />
     <Compile Include="ViewTheProductsInADepartmentSpec.cs" />

@@ -6,9 +6,4 @@ namespace app.web.application.catalog_browsing
     {
         IEnumerable<ProductInfoItem> get_products_of_department(ProductsInDepartmentInput input);
     }
-
-    public class ProductInfoItem
-    {
-        public string name { get; set; }
-    }
 }
